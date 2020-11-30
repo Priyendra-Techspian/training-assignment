@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fname": "Agent",
+      "lname": "Hunt",
+      "email": "hunt@ttt.com",
+      "mobile": "112"
+    },
+    {
+      "fname": "Priyendra",
+      "lname": "Pardeshi",
+      "email": "priyendra113@gmail.com",
+      "mobile": "8932494324",
+      "id": 2
+    }
+  ],
+  "songs": [
+    {
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

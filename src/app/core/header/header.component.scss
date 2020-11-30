@@ -1,0 +1,29 @@
+.logoImgDiv{
+    display: inline-block;
+}
+.logoImg{
+    height:50px;
+}
+
+.grid-6-column{
+    grid-template-columns: auto auto auto auto auto auto;   
+    grid-gap:10px; 
+}
+
+.grid-logo-item{
+    grid-column: 1 / 5;
+}
+
+.headerDiv{
+    padding: 10px 15px;
+    border-bottom: 1px solid #e4e4e4;
+  /*   background: cornflowerblue; */
+}
+
+.headerLink{
+    a{
+        color: black;
+        font-weight: 700;
+        text-decoration: none;
+    }
+}

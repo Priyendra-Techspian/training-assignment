@@ -1,0 +1,85 @@
+<div class="grid-container grid-3-column mainDiv">
+    <div class="loginDiv appFont" *ngIf="isLogin">
+        <form action="" name="loginForm" [formGroup]="loginForm">
+            <div class="grid-item">
+                <div class="form-element text-center">
+                    <h1 class="whiteColor">Login</h1>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="form-element">
+                    <input type="text" name="email" formControlName="email" placeholder="Enter email id">
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="form-element mb-25">
+                    <input type="password" name="password" formControlName="password" placeholder="Enter password">
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="form-element">
+                    <button type="button" [disabled]="!loginForm.valid" (click)="login()" class="loginBtn w-100">Login</button>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="form-element ">
+                     <a class="font-16 registrationLink" (click)="isLogin = false;"> Registration</a> 
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="registrationDiv appFont" *ngIf="!isLogin">
+        <form name="registrationForm" [formGroup]="registrationForm">
+            <div class="grid-item">
+                <div class="form-element text-center">
+                    <h1 class="whiteColor">Registration</h1>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="form-element">
+                    <input type="email" class="w-85" name="fname" formControlName="fname" placeholder="Enter first name">
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="form-element">
+                    <input type="text" class="w-85" name="lname" formControlName="lname" placeholder="Enter last name">
+                </div>
+            </div>
+            
+            <div class="grid-item">
+                <div class="form-element">
+                    <input type="text" class="w-85" name="email" formControlName="email" placeholder="Enter email id">
+                </div>
+            </div>
+            
+            <div class="grid-item">
+                <div class="form-element mb-25">
+                    <input type="text" class="w-85" name="mobile" maxlength="10" minlength="10"
+                     formControlName="mobile" placeholder="Enter mobile no.">
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="form-element">
+                    <button type="button" [disabled]="!registrationForm.valid" (click)="registerUser()" class="registrationBtn w-100">Registration</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+<!-- <div>
+    <audio controls>
+        <source src="https://instrumentalfx.co/wp-content/upload/11/Mission-Impossible.mp3" type="audio/ogg">
+        <source src="https://instrumentalfx.co/wp-content/upload/11/Mission-Impossible.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+</div> -->

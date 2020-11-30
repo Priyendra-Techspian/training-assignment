@@ -1,0 +1,103 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+}
+.w-100{
+    width: 100%;
+}
+.mb-25{
+    margin-bottom: 25px !important;
+}
+.mb-15{
+    margin-bottom: 15px !important;
+}
+
+.grid-container{
+    display: grid;
+    align-items: center;
+}
+
+.appFont{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.active-link{
+    color: cornflowerblue !important;
+    font-weight: 700 !important;
+    text-decoration: none;
+}
+
+.form-element{
+    input{
+        padding: 10px 15px;
+        border-radius: 2px;
+    }
+    select{
+        padding: 10px 10px;
+        border-radius: 2px;
+    }
+}
+
+.form-element{
+    margin-bottom: 15px;
+}
+
+.text-center{
+    text-align: center;
+}
+.font-16{
+font-size: 16px;
+}
+.whiteColor{
+    color: #ffffff;
+}
+.w-80{
+    width: 80%;
+}
+.w-85{
+    width: 85%;
+}
+.dispInlineBlock{
+    display: inline-block;
+}
+.text-right{
+    text-align: right;
+}
+.border-bot{
+    border-bottom: .5px solid #d2d2d2;
+}
+.mb-0px{
+margin-bottom: 0px !important;
+}
+
+table{
+    border-collapse: collapse;
+    // border: 0.5px solid #d2d2d2;
+    padding: 0px 15px;
+    overflow-y: auto;
+    tbody {
+        tr{
+            border: 1px solid rgb(222, 226, 230);
+            td{
+                padding: 10px 15px;
+                cursor: pointer;
+            }
+        }
+
+        tr:nth-child(even){
+            background: #f8f8f8;
+            // border: .5px solid #d2d2d2;
+        }
+      
+    }
+}
+
+.posRel{
+    position: relative;
+}
+
+.songNameStyle{
+    color: #c4172c;
+    font-weight: 700;
+    font-size: 18px;
+}

@@ -1,0 +1,45 @@
+// $btnColor: #5dccfb;
+
+@mixin btnColor($color) {
+    padding: 13px;
+    background: $color;
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.grid-3-column{
+    grid-template-columns: auto auto auto;   
+    grid-gap:10px;
+    grid-template-rows: calc(100vh - 18px); 
+}
+
+.loginDiv, .registrationDiv{
+   /*  grid-column: 1 / 3; */
+    justify-self: center;
+    padding: 40px 30px;
+    border: 1px solid #a8a8a8;
+    border-radius: 5px;
+}
+
+.loginBtn{
+   @include btnColor(#5dccfb);
+}
+
+.registrationBtn{
+    @include btnColor(#eb7c78);
+ }
+
+.registrationLink{
+    color: cornflowerblue;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.mainDiv{
+    background-image: url("../../../assets/images/guitar.jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
