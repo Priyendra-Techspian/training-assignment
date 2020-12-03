@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+// $songNameColor: #c4172c;
+$activeLinkColor: var(--activeLink-color);
+$songNameColor: var(--songName-color);
+
+
 body{
     margin: 0;
 }
@@ -22,7 +27,7 @@ body{
 }
 
 .active-link{
-    color: cornflowerblue !important;
+    color: $activeLinkColor !important;//cornflowerblue !important;
     font-weight: 700 !important;
     text-decoration: none;
 }
@@ -97,7 +102,19 @@ table{
 }
 
 .songNameStyle{
-    color: #c4172c;
+    color: $songNameColor;
     font-weight: 700;
     font-size: 18px;
+}
+
+.errorMsg{
+    color:red;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+button[disabled] {
+    cursor: not-allowed !important;
+}
+.pointer{
+    cursor: pointer !important;
 }

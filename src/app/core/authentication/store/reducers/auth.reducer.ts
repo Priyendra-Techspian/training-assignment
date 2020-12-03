@@ -25,6 +25,8 @@ export const authReducer = createReducer(
 
   on(AllAuthActions.auths, (state, action)=>{ return { ...state, userDetails: action.data }}),
 
-  on(AllAuthActions.authSuccess, (state, action)=>{ return { ...state, isAuthenticated:true, userDetails: action.data }})
+  on(AllAuthActions.authSuccess, (state, action)=>{ return { ...state, isAuthenticated:true, userDetails: action.data }}),
+
+  on(AllAuthActions.authFailure, (state, action)=>{ return { ...state, message:action.error, userDetails: null }})
 );
 

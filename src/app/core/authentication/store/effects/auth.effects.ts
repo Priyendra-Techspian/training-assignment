@@ -7,12 +7,14 @@ import { AuthenticationService } from '../../authentication.service';
 import * as AllAuthActions from '../actions/auth.actions';
 import { catchError, map, mergeMap } from 'rxjs/operators';
 import { User } from 'src/app/shared/models/user.model';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthEffects {
 
   constructor(private actions$: Actions,
               private http: HttpClient,
+              private router: Router,
               private authenticationService:AuthenticationService) {}
 
   getAllUser$: Observable<Action> = createEffect(() => 
@@ -37,11 +39,31 @@ export class AuthEffects {
   this.actions$.pipe(
     ofType(AllAuthActions.auths),
     mergeMap(action =>
-        //this.authenticationService.login(action.data)
-        this.authenticationService.getUserDetail(action.data)
+
+        this.authenticationService.login(action.data)
+        
         .pipe(
-          map((data: User) => {
-            return AllAuthActions.authSuccess({ data });
+          map((data) => {
+           /*  this.getAllUser$.subscribe((response:any)=>{
+              console.log(" response ::::>>>", response );
+            }) */
+            // let finalArr = [] = data.filter((x:any)=> x.email == action.data.email)
+            // if(finalArr.length > 0){
+            //   return AllAuthActions.authSuccess({ finalArr[0] });              
+            // } 
+            // this.authenticationService.login(action.data)._
+            if(data.length > 0){
+              alert("login successfully")
+              this.router.navigate(['/app/home']);
+              localStorage.setItem('loggedIn', 'true');
+              return AllAuthActions.authSuccess({ data });
+            }else{
+              alert("login failed");
+              localStorage.setItem('loggedIn', 'false');
+              return AllAuthActions.authFailure( data );
+              
+            }
+
           }),
           catchError((error) => {
             return of(AllAuthActions.authFailure(error));

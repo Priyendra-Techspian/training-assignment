@@ -12,7 +12,7 @@ import { AuthEffects } from './authentication/store/effects/auth.effects';
   declarations: [  HeaderComponent, FooterComponent, AuthLayoutComponent],
   imports: [
     CommonModule,
-    EffectsModule.forFeature([AuthEffects])
+    // EffectsModule.forFeature([AuthEffects])
   ]
 })
 export class CoreModule { }

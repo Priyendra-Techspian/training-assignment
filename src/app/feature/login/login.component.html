@@ -10,17 +10,23 @@
             <div class="grid-item">
                 <div class="form-element">
                     <input type="text" name="email" formControlName="email" placeholder="Enter email id">
+                    <div *ngIf="loginForm.controls.email.invalid && (loginForm.controls.email.dirty || loginForm.controls.email.touched)"> 
+                        <span class="errorMsg" *ngIf="loginForm.controls.email.errors.required">Please enter username</span>
+                    </div>
                 </div>
             </div>
             <div class="grid-item">
                 <div class="form-element mb-25">
                     <input type="password" name="password" formControlName="password" placeholder="Enter password">
+                    <div *ngIf="loginForm.controls.password.invalid && (loginForm.controls.password.dirty || loginForm.controls.password.touched)"> 
+                        <span class="errorMsg" *ngIf="loginForm.controls.password.errors.required">Please enter password</span>
+                    </div>
                 </div>
             </div>
 
             <div class="grid-item">
                 <div class="form-element">
-                    <button type="button" [disabled]="!loginForm.valid" (click)="login()" class="loginBtn w-100">Login</button>
+                    <button type="submit" [disabled]="!loginForm.valid" (click)="login()" class="loginBtn w-100 pointer">Login</button>
                 </div>
             </div>
 
@@ -33,7 +39,7 @@
     </div>
 
     <div class="registrationDiv appFont" *ngIf="!isLogin">
-        <form name="registrationForm" [formGroup]="registrationForm">
+        <form name="registrationForm" [formGroup]="registrationForm" novalidate>
             <div class="grid-item">
                 <div class="form-element text-center">
                     <h1 class="whiteColor">Registration</h1>
@@ -43,34 +49,77 @@
             <div class="grid-item">
                 <div class="form-element">
                     <input type="email" class="w-85" name="fname" formControlName="fname" placeholder="Enter first name">
+                    <div *ngIf="registrationForm.controls.fname.invalid && (registrationForm.controls.fname.dirty || registrationForm.controls.fname.touched)"> 
+                        <span class="errorMsg" *ngIf="registrationForm.controls.fname.errors.required">Please enter first name</span>
+                    </div>
                 </div>
             </div>
 
             <div class="grid-item">
                 <div class="form-element">
                     <input type="text" class="w-85" name="lname" formControlName="lname" placeholder="Enter last name">
+                    <div *ngIf="registrationForm.controls.lname.invalid && (registrationForm.controls.lname.dirty || registrationForm.controls.lname.touched)"> 
+                        <span class="errorMsg" *ngIf="registrationForm.controls.lname.errors.required">Please enter last name</span>
+                    </div>
                 </div>
             </div>
             
             <div class="grid-item">
                 <div class="form-element">
                     <input type="text" class="w-85" name="email" formControlName="email" placeholder="Enter email id">
+                    <div *ngIf="registrationForm.controls.email.invalid && (registrationForm.controls.email.dirty || registrationForm.controls.email.touched)"> 
+                        <span class="errorMsg" *ngIf="registrationForm.controls.email.errors.required">Please enter email</span>
+                    </div>
                 </div>
             </div>
             
-            <div class="grid-item">
+<!--             <div class="grid-item">
                 <div class="form-element mb-25">
                     <input type="text" class="w-85" name="mobile" maxlength="10" minlength="10"
                      formControlName="mobile" placeholder="Enter mobile no.">
+                     <div *ngIf="registrationForm.controls.mobile.invalid && (registrationForm.controls.mobile.dirty || registrationForm.controls.mobile.touched)"> 
+                        <span class="errorMsg" *ngIf="registrationForm.controls.mobile.errors.required">Please enter mobile</span>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="grid-item">
+                <div class="form-element mb-25">
+                    <input type="password" class="w-85" name="password" 
+                     formControlName="password" placeholder="Enter password">
+                    <div *ngIf="registrationForm.controls.password.invalid && (registrationForm.controls.password.dirty || registrationForm.controls.password.touched)"> 
+                        <span class="errorMsg" *ngIf="registrationForm.controls.password.errors.required">Please enter password</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="form-element mb-25">
+                    <input type="password" class="w-85" (keyup)="checkPassword()" name="confirmPassword" 
+                     formControlName="confirmPassword" placeholder="Enter confirm password">
+                    <div *ngIf="registrationForm.controls.confirmPassword.invalid && (registrationForm.controls.confirmPassword.dirty || registrationForm.controls.confirmPassword.touched)"> 
+                        <span class="errorMsg" *ngIf="!checkPasswordFlag && registrationForm.controls.confirmPassword.errors.required">Please enter confirm password</span>
+                    </div>
+                    <span class="errorMsg" *ngIf="checkPasswordFlag"> Password & Confirm password should be same </span>
                 </div>
             </div>
 
             <div class="grid-item">
                 <div class="form-element">
-                    <button type="button" [disabled]="!registrationForm.valid" (click)="registerUser()" class="registrationBtn w-100">Registration</button>
+                    <button type="button" (click)="registerUser()" [disabled]="!registrationForm.valid"  class="registrationBtn w-100 pointer">Registration</button>
                 </div>
             </div>
 
+            <div class="grid-item">
+                <div class="form-element ">
+                     <a class="font-16 registrationLink" (click)="isLogin = true;"> Back to login</a> 
+                </div>
+            </div>
+<!-- 
+            <div *ngIf="checkPasswordFlag">
+                <span style="color:#ffffff; font-size:16px"> Password & Confirm password should be same </span>
+            </div>
+ -->
         </form>
     </div>
 </div>

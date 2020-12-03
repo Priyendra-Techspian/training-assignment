@@ -1,0 +1,94 @@
+
+@mixin actionBtnStyle() {
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: none;
+    // background: #49b4f2;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+.grid-4-column{
+    grid-template-columns: auto auto auto auto;   
+    grid-column-gap:10px;
+    align-items: center;
+    grid-template-rows: 80px;
+}
+
+.grid-3-column{
+    grid-template-columns: auto auto auto ;   
+    grid-column-gap:10px;
+    align-items: center;
+}
+
+.ml-5{
+    margin-left:5px;
+}
+.grid-item{
+    grid-column: 2/4;
+}
+.grid-item-1-3{
+    grid-column: 3/12;
+}
+
+.grid-6-column{
+    grid-template-rows: 100%;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+.grid-table-item{
+    grid-column: 2/6;
+}
+
+
+.tableDiv{
+    height: 400px;
+    overflow-y: auto;
+}
+
+.tableLbls{
+    position: absolute;
+    top: 33%;
+    left: 20%;
+}
+
+.actionBtnDiv{
+    position: absolute;
+    top: 33%;
+    right: 5%;
+}
+
+.editBtn{
+    @include actionBtnStyle();
+    background: #49b4f2;
+}
+
+.deleteBtn{
+    @include actionBtnStyle();
+    background: #f27539;
+}
+
+.addBtnStyle{
+    @include actionBtnStyle();
+    background:#4e7185;
+}
+
+.lableHeaderCol{
+    grid-template-columns: auto auto auto auto auto auto;   
+    grid-column-gap:10px;
+    align-items: center;
+}
+
+.song-grid-item{
+    grid-column: 1/3;
+}
+.btn-grid-item{
+    grid-column: 3/6;
+}
+.pageHeading{
+    font-size: 20px;
+    color: #5e5151;
+    font-weight: 700;
+}

@@ -1,1 +1,113 @@
-<p>song-management works!</p>
+
+<div class="grid-container lableHeaderCol mb-15">
+    <div class="song-grid-item text-center">
+        <span class="pageHeading appFont">Song List</span>
+    </div>
+    <div class="btn-grid-item  text-right">
+        <div class="dispInlineBlock">
+            <button class="addBtnStyle appFont" type="button" (click)="navigatetoAddSong()">Add Song</button>
+        </div>
+    </div>
+</div>
+
+<div class="grid-container grid-6-column appFont">
+   <!--  <div *ngFor=" let songs of songsList$ | async">
+        <span>{{songs.name}}</span>
+    </div> -->
+    <div class="grid-table-item">
+        <div class="tableDiv">
+            <table class="w-100 appFont">
+                <tbody>
+                    <tr *ngFor=" let songs of songsList$ | async;">
+                        <td>
+                            <div class="posRel">
+                                <div class="dispInlineBlock">
+                                    <img src="../../../assets/images/no-image.png" style="height: 60px;width: 80px;" alt="">
+                                    <!-- <img [src]="songs.imageUrl" style="height: 60px;width: 80px;" alt=""> -->
+                                </div>
+                                <div class="dispInlineBlock ml-5 tableLbls">
+                                    <span class="songNameStyle"> {{songs.name}}</span>
+                                </div>
+
+                                <div class="actionBtnDiv">
+                                    <div class="dispInlineBlock ">
+                                        <button class="editBtn appFont" (click)="editSongDetail(songs.id)" type="button">Edit</button>
+                                    </div>
+                                    <div class="dispInlineBlock ml-5">
+                                        <button class="deleteBtn appFont" (click)="deleteSong(songs.id)" type="button">Delete</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+                  <!--   <tr>
+                        <td>
+                             <div class="posRel">
+                                 <div class="dispInlineBlock">
+                                     <img src="../../../assets/images/guitar.jfif" style="height: 60px;width: 80px;" alt="">
+                                 </div>
+                                 <div class="dispInlineBlock ml-5 tableLbls">
+                                     <span class="songNameStyle"> test music tone.mp3</span>
+                                 </div>
+                             </div>
+                         </td>
+                    </tr> -->
+                </tbody>
+                
+            </table>
+        </div>
+
+    </div>
+
+  <!--   <div class="grid-form-item">
+        <div class="songFormDiv" *ngIf="songFormFlag">
+            <form action="" name="songForm" [formGroup]="songForm">
+                <div class="grid-item">
+                    <div class="form-element text-center">
+                        <h1 class=""  *ngIf="!dataUpdateFlag">Add Song</h1>
+                        <h1 class=""  *ngIf="dataUpdateFlag">Update Song</h1>
+
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="form-element text-center">
+                        <input type="text" class="w-72" name="name" formControlName="name" placeholder="Enter song name">
+                        <div *ngIf="songForm.controls.name.invalid && (songForm.controls.name.dirty || songForm.controls.name.touched)"> 
+                            <span class="errorMsg" *ngIf="songForm.controls.name.errors.required">Please enter song name</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="form-element text-center">
+                        <input type="text" class="w-72" name="name" formControlName="songUrl" placeholder="Enter song name">
+                        <div *ngIf="songForm.controls.songUrl.invalid && (songForm.controls.songUrl.dirty || songForm.controls.songUrl.touched)"> 
+                            <span class="errorMsg" *ngIf="songForm.controls.songUrl.errors.required">Please enter song url</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="grid-item">
+                    <div class="form-element text-center mb-25">
+                        <input type="text" class="w-72" name="imageUrl" formControlName="imageUrl" placeholder="Enter image url">
+                        <div *ngIf="songForm.controls.imageUrl.invalid && (songForm.controls.imageUrl.dirty || songForm.controls.imageUrl.touched)"> 
+                            <span class="errorMsg" *ngIf="songForm.controls.imageUrl.errors.required">Please enter image url</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="grid-item">
+                    <div class="form-element text-center">
+                        <button *ngIf="!dataUpdateFlag" type="button" [disabled]="!songForm.valid" (click)="addSong()" class="saveBtn w-80 pointer">Save</button>
+                        <button *ngIf="dataUpdateFlag" type="button" [disabled]="!songForm.valid" (click)="updateSong()" class="saveBtn w-80 pointer">Update</button>
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    
+    </div>
+  -->
+</div>

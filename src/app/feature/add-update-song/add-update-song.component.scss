@@ -1,0 +1,47 @@
+
+.lableHeaderCol{
+    grid-template-columns: auto auto auto auto auto auto;   
+    grid-column-gap:10px;
+    align-items: center;
+}
+
+.songFormDiv{
+    justify-self: center;
+    padding: 40px 30px;
+    border: 1px solid #a8a8a8;
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+.w-72{
+    width: 72%;
+}
+
+.saveBtn{
+    padding: 13px;
+    background: #5dccfb;
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+.song-grid-item{
+    grid-column: 1/3;
+}
+.btn-grid-item{
+    grid-column: 3/6;
+}
+.pageHeading{
+    font-size: 20px;
+    color: #5e5151;
+    font-weight: 700;
+}
+
+.grid-form-item{
+    grid-column: 3/5;
+}
+.grid-6-column{
+    grid-template-rows: 100%;
+    grid-template-columns: auto auto auto auto auto auto;
+}

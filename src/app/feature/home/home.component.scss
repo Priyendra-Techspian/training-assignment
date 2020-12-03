@@ -32,7 +32,8 @@
 }
 
 .tableDiv{
-    height: 400px;
+    height: 500px;
+    overflow-y: auto;
 }
 
 .tableLbls{
@@ -44,3 +45,9 @@
 .grid-item-2{
     grid-column: 2/6;
 } */
+
+.audioDiv{
+    position: absolute;
+    right:0;
+    top:5px;
+}

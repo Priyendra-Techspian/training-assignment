@@ -1,6 +1,5 @@
-<div class="grid-container mb-15 grid-4-column appFont border-bot">
+<!-- <div class="grid-container mb-15 grid-4-column appFont border-bot">
     <div class="grid-item-1">
-        <!-- <div class=""> -->
             <div class=" grid-container mb-0px  form-element grid-3-column">
                 <div class="grid-item-1-1 text-right dispInlineBlock">
                      <label >Filter</label>
@@ -18,12 +17,10 @@
                             <option value="party">Party Songs</option>
                             <option value="old">Old Songs</option>
                             <option value="love">Love Songs</option>
-                            <!-- <option value="rock">Rock Songs</option> -->
                         </select>
                     </div>
                  </div>
              </div>
-        <!-- </div> -->
     </div>
     <div class="grid-item-2">
         <div class="form-element mb-0px text-center">
@@ -31,26 +28,35 @@
         </div>
     </div>
     
-</div>
+</div> -->
 
 <div class="grid-container grid-6-column appFont">
     <div class="grid-table-item">
         <div class="tableDiv">
             <table class="w-100 appFont">
                 <tbody>
-                    <tr>
+                    <tr *ngFor=" let songs of songsList$ | async;">
                         <td>
                             <div class="posRel">
                                 <div class="dispInlineBlock">
-                                    <img src="../../../assets/images/background.jfif" style="height: 60px;width: 80px;" alt="">
+                                    
+                                    <img src="../../../assets/images/no-image.png" style="height: 60px;width: 80px;" alt="">
+                                    <!-- <img [src]="songs.imageUrl" style="height: 60px;width: 80px;" alt=""> -->
                                 </div>
                                 <div class="dispInlineBlock ml-5 tableLbls">
-                                    <span class="songNameStyle"> sample music tone.mp3</span>
+                                    <span class="songNameStyle"> {{songs.name}}</span>
                                 </div>
+                                <div class="audioDiv">
+                                    <audio controls>
+                                        <source [src]="songs.songUrl" type="audio/ogg">
+                                        <source [src]="songs.songUrl" type="audio/mpeg">
+                                    </audio>
+                                </div>
+
                             </div>
                         </td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>
                              <div class="posRel">
                                  <div class="dispInlineBlock">
@@ -61,7 +67,7 @@
                                  </div>
                              </div>
                          </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
                 
             </table>
