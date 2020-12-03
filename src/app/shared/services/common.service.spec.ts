@@ -14,7 +14,7 @@ describe('CommonService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-/* 
+
   it('should be fetch all songs ', () => {
     let songObj = { id:1, name: "Song name", songUrl:"https://static.statusqueen.in/ringtones/krishna_flute_2014-53.mp3"};
     service.fetchSongs().subscribe((response)=>{
@@ -47,5 +47,5 @@ describe('CommonService', () => {
     service.deleteSongDetail('2').subscribe((response)=>{
         expect(response).toBe({})
     })
-  }) */
+  })
 });

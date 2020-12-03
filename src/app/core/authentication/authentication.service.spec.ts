@@ -14,7 +14,7 @@ describe('AuthenticationService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-/* 
+
   it('should be login user ', () => {
     let userObj = { email: 'test@gmail.com', password:"1234"};
     service.login(userObj).subscribe((response)=>{
@@ -27,6 +27,6 @@ describe('AuthenticationService', () => {
     service.register(userObj).subscribe((response)=>{
         expect(response).toBe(userObj)
     })
-  }) */
+  })
 
 });
