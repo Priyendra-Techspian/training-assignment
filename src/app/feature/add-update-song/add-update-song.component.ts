@@ -31,16 +31,14 @@ export class AddUpdateSongComponent implements OnInit {
               public router: Router,
               private route: ActivatedRoute
   ) {
-    /* this.route.queryParams.subscribe((param)=>{
-      this.songId = param['songId'];
-    }) */
+    
     this.currentUrl = this.router.url; //.split("/")[this.router.url.split("/").length - 1];
    }
 
   ngOnInit(): void {
     this.songForm = this.formbuilder.group({
       name:['', Validators.required],
-      imageUrl: ['', Validators.required],
+      // imageUrl: ['', Validators.required],
       songUrl: ['', Validators.required],
    });
 
@@ -60,15 +58,9 @@ export class AddUpdateSongComponent implements OnInit {
   }
 
   editSongDetail(id:any){
-    // localStorage.setItem('selectedSongId', id)
     this.songId = id;
-    // this.store.dispatch(SongActions.loadSingleSong({id}));
     this.dataUpdateFlag = true;
-
-    console.log("this.songDetail$ :::>", this.songDetail$);
     this.store.pipe(select(selectedSongDetail)).subscribe((data)=>{
-      console.log(" Single song data ", data)
-      
       this.songDetail$ = data[0];//Object.assign(new Song(), data[0]);
       this.songForm.patchValue(this.songDetail$);
     })
@@ -76,11 +68,7 @@ export class AddUpdateSongComponent implements OnInit {
 
   updateSong(){
       this.updateSongObj = Object.assign({ id: this.songId, changes:this.songForm.value })//this.songForm.value;
-      // this.updateSongObj.id = this.songId;
       this.store.dispatch(SongActions.updateSong({data : this.updateSongObj}));
-      // this.fetchAllSongs();
-      // this.dataUpdateFlag = true;
-      // this.store.dispatch(SongActions.loadSongs());
       this.songForm.reset();
   }
 

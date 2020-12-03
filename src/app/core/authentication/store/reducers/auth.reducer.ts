@@ -21,7 +21,7 @@ export const initialState: State = {
 export const authReducer = createReducer(
   initialState,
 
-  on(AllAuthActions.allUsers, (state, action:any)=>{ return { ...state, userDetails: action.data }}),
+  // on(AllAuthActions.allUsers, (state, action:any)=>{ return { ...state, userDetails: action.data }}),
 
   on(AllAuthActions.auths, (state, action)=>{ return { ...state, userDetails: action.data }}),
 

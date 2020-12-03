@@ -11,22 +11,9 @@ export class AuthenticationService {
 
   constructor(private http: HttpClient) { }
 
-  set userDetails(data:any){
-    
-  }
-
-  login(data: User) : Observable<any>{
+  login(data: any) : Observable<any>{
     return this.http.get(environment.baseUrl + '/users?email='+ data.email + '&password=' + data.password);
   }
-
-  getUserDetail(id:any) : Observable<any>{
-    return this.http.get(environment.baseUrl + '/users/'+ id);
-  }
-
-  getAllUserDetail() : Observable<any>{
-    return this.http.get(environment.baseUrl + '/users');
-  }
-
 
   register(data: User): Observable<any>{
     return this.http.post(environment.baseUrl + '/users', data);

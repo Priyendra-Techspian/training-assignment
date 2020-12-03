@@ -22,7 +22,6 @@ export const selectSongState = createFeatureSelector<SongState>(
 
 export const selectAllUsers = (state:AppState) => state.allUsers;
 
-
 export const selectSongs = createSelector(selectSongState, selectAll);
 
 export const selectedSongDetail = createSelector(selectSongState, (state: SongState) => state.songDetails);

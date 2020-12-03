@@ -23,7 +23,7 @@
             <div class="grid-item">
                 <div class="form-element text-center">
                     <input type="text" class="w-72" name="name" formControlName="name" placeholder="Enter song name">
-                    <div *ngIf="songForm.controls.name.invalid && (songForm.controls.name.dirty || songForm.controls.name.touched)"> 
+                    <div class="text-left" *ngIf="songForm.controls.name.invalid && (songForm.controls.name.dirty || songForm.controls.name.touched)"> 
                         <span class="errorMsg" *ngIf="songForm.controls.name.errors.required">Please enter song name</span>
                     </div>
                 </div>
@@ -32,20 +32,20 @@
             <div class="grid-item">
                 <div class="form-element text-center">
                     <input type="text" class="w-72" name="name" formControlName="songUrl" placeholder="Enter song url">
-                    <div *ngIf="songForm.controls.songUrl.invalid && (songForm.controls.songUrl.dirty || songForm.controls.songUrl.touched)"> 
+                    <div class="text-left" *ngIf="songForm.controls.songUrl.invalid && (songForm.controls.songUrl.dirty || songForm.controls.songUrl.touched)"> 
                         <span class="errorMsg" *ngIf="songForm.controls.songUrl.errors.required">Please enter song url</span>
                     </div>
                 </div>
             </div>
 
-            <div class="grid-item">
+           <!--  <div class="grid-item">
                 <div class="form-element text-center mb-25">
                     <input type="text" class="w-72" name="imageUrl" formControlName="imageUrl" placeholder="Enter image url">
-                    <div *ngIf="songForm.controls.imageUrl.invalid && (songForm.controls.imageUrl.dirty || songForm.controls.imageUrl.touched)"> 
+                    <div class="text-left" *ngIf="songForm.controls.imageUrl.invalid && (songForm.controls.imageUrl.dirty || songForm.controls.imageUrl.touched)"> 
                         <span class="errorMsg" *ngIf="songForm.controls.imageUrl.errors.required">Please enter image url</span>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="grid-item">
                 <div class="form-element text-center">

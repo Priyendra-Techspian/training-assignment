@@ -29,7 +29,6 @@ export class HomeComponent implements OnInit {
   fetchAllSongs(){
     this.store.dispatch(SongActions.loadSongs());
     this.songsList$ = this.store.pipe(select(selectSongs));
-    console.log("this.songs $ ::>", this.songsList$);
   }
 
 }

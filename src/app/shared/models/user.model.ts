@@ -8,7 +8,5 @@ export class User {
 
 export class Song{
     name:string;
-    imageUrl:string;
     songUrl:string;
-    
 }

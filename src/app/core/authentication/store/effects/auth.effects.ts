@@ -17,24 +17,6 @@ export class AuthEffects {
               private router: Router,
               private authenticationService:AuthenticationService) {}
 
-  getAllUser$: Observable<Action> = createEffect(() => 
-    this.actions$.pipe(
-      ofType(AllAuthActions.allUsers),
-      mergeMap( action => 
-          this.authenticationService.getAllUserDetail().
-          pipe(
-              map((data:User[]) => {
-                return AllAuthActions.allUsersSuccess({ data })
-              }),
-              catchError((error)=>{
-                return of(AllAuthActions.allUsersFailure(error)); 
-              })
-          )  
-      )
-      //getAllUserDetail      
-    )
-  )
-
   Login$: Observable<Action> = createEffect(() =>
   this.actions$.pipe(
     ofType(AllAuthActions.auths),

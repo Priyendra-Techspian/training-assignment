@@ -54,7 +54,6 @@ export class SongManagementComponent implements OnInit {
   fetchAllSongs(){
     this.store.dispatch(SongActions.loadSongs());
     this.songsList$ = this.store.pipe(select(selectSongs));
-    console.log("this.songss $ ::>", this.songsList$);
   }
 
   editSongDetail(id:any){

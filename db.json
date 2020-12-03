@@ -2,17 +2,15 @@
   "users": [
     {
       "id": 1,
-      "fname": "Agent",
-      "lname": "Hunt",
-      "email": "hunt@ttt.com",
-      "mobile": "112",
+      "fname": "Suresh",
+      "lname": "S",
+      "email": "suresh@gmail.com",
       "password": 1234
     },
     {
       "fname": "Priyendra",
       "lname": "Pardeshi",
       "email": "priyendra113@gmail.com",
-      "mobile": "8932494324",
       "id": 2,
       "password": 1234
     },
@@ -20,15 +18,14 @@
       "fname": "Rahul",
       "lname": "Test",
       "email": "rahul@gmail.com",
-      "mobile": "7878766767",
       "password": "12345",
       "confirmPassword": "12345",
       "id": 4
     },
     {
-      "fname": "Hunt",
-      "lname": "Agent",
-      "email": "hunt@gmail.com",
+      "fname": "Suresh",
+      "lname": "S",
+      "email": "suresh@gmail.com",
       "password": "1234",
       "confirmPassword": "1234",
       "id": 5
@@ -36,58 +33,44 @@
   ],
   "songs": [
     {
-      "name": "Krishna Flute.mp3",
-      "imageUrl": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fbeleaderly.com%2Fwp-content%2Fuploads%2F2016%2F02%2F15-songs-for-your-leadership-playlist_opt.jpg&imgrefurl=https%3A%2F%2Fbeleaderly.com%2F15-songs-for-your-leadership-playlist-2%2F&tbnid=NZvLPe9EFT8F3M&vet=12ahUKEwifiN3B1aztAhWpGbcAHTc1ChEQMygCegUIARDSAQ..i&docid=nfi6eL_yQznaSM&w=720&h=540&q=songs%20images&ved=2ahUKEwifiN3B1aztAhWpGbcAHTc1ChEQMygCegUIARDSAQ",
-      "songUrl": "https://static.statusqueen.in/ringtones/krishna_flute_2014-53.mp3",
-      "id": 1
-    },
-    {
       "name": "Rockstar - tone",
-      "imageUrl": "rockstarr ",
       "songUrl": "https://static.statusqueen.in/ringtones/rockstar-34.mp3",
       "id": 2
     },
     {
-      "name": "Song-3.mp3",
-      "imageUrl": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.kveller.com%2Fwp-content%2Fuploads%2F2016%2F05%2Fshabbat-songs-1200x800.jpg&imgrefurl=https%3A%2F%2Fwww.kveller.com%2Farticle%2Four-favorite-shabbat-songs-for-kids%2F&tbnid=-C3aPO_bqW5lpM&vet=12ahUKEwifiN3B1aztAhWpGbcAHTc1ChEQMygFegUIARDZAQ..i&docid=zFoWwDwpC-nsWM&w=1200&h=800&q=songs%20images&ved=2ahUKEwifiN3B1aztAhWpGbcAHTc1ChEQMygFegUIARDZAQ",
+      "name": "Song-3",
       "songUrl": "https://instrumentalfx.co/wp-content/upload/11/Mission-Impossible.mp3",
       "id": 3
     },
     {
-      "name": "Agent.mp3",
-      "imageUrl": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fs18670.pcdn.co%2Fwp-content%2Fuploads%2FAwesome-Songs-for-Your-End-of-Year-Playlist.jpg&imgrefurl=https%3A%2F%2Fwww.weareteachers.com%2Fend-of-year-playlist%2F&tbnid=up9XHXK-USHPHM&vet=12ahUKEwifiN3B1aztAhWpGbcAHTc1ChEQMygUegUIARD3AQ..i&docid=yY422cTZz7P1PM&w=800&h=450&q=songs%20images&ved=2ahUKEwifiN3B1aztAhWpGbcAHTc1ChEQMygUegUIARD3AQ",
+      "name": "MI tone",
       "songUrl": "https://instrumentalfx.co/wp-content/upload/11/Mission-Impossible.mp3",
       "id": 4
     },
     {
-      "name": "Sathiya-Best Tone",
-      "imageUrl": "cccc",
+      "name": "Tone",
       "songUrl": "https://static.statusqueen.in/ringtones/Best ever ringtone-40.mp3",
       "id": 5
     },
     {
       "name": "iphone-6 - tone",
-      "imageUrl": "testt",
       "songUrl": "https://static.statusqueen.in/ringtones/iphone_6-30.mp3",
       "id": 6
     },
     {
       "name": "KGF - Tone",
-      "imageUrl": "testt",
       "songUrl": "https://static.statusqueen.in/ringtones/kgf_moms_love_flute-52.mp3",
       "id": 7
     },
     {
       "name": "Test",
-      "imageUrl": "tttt ",
       "songUrl": "tttt",
       "id": 8
     },
     {
-      "name": "Haunted-133.mp3",
-      "imageUrl": "test",
-      "songUrl": "https://static.statusqueen.in/ringtones/mahadev_ringtone-124.mp3",
-      "id": 9
+      "name": "INSTRUMENTAL",
+      "songUrl": "https://static.statusqueen.in/ringtones/soft ring-414.mp3",
+      "id": 10
     }
   ],
   "profile": {

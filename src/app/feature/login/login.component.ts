@@ -82,12 +82,9 @@ export class LoginComponent implements OnInit {
   }
 
   registerUser(){
-    // this.router.navigate(['/app/home']);
      this.user = this.registrationForm.value;
-    console.log( "register", this.user );
     this.authService.register(this.user).subscribe(
       (response)=>{
-        console.log(" Registered Successfully", response);
         alert("Registered user successfully..!")
         this.isLogin = true;
         this.registrationForm.reset();
